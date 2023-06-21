@@ -10,7 +10,7 @@
   /* font-size(pc) */
   --pc-header-font-size: 18px;
   --pc-h1-font-size: 30px;
-  --pc-main-font-size: 14px;
+  --pc-main-font-size: 15px;
   --pc-site-map-font-size: 12px;
   /* font-size(sp) */
   --sp-h1-font-size: 20px;
@@ -33,6 +33,11 @@ body {
   width: 100%;
 }
 
+.d-fl {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .l-hd {
   width: 100%;
   height: 100px;
@@ -40,15 +45,154 @@ body {
   top: 0;
   left: 0;
   /* padding: 20px 0; */
-  background-color: #E8E0DD;
+  background-color: #fff;
   z-index: 99;
   font-family: var(--sub-font-family);
   font-size: var(--pc-header-font-size);
 }
 
-header h1 {
-  text-align: center;
-  line-height: 100px;
+.l-hd-inn {
+  padding-left: 140px;
+}
+
+.l-hd-inn-fl {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.l-hd-inn-nav {
+  max-width: 705px;
+  width: 70%;
+}
+
+.menu-list {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-list li {
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    font-family: classico-urw,sans-serif;
+    text-align: center;
+    line-height: 1.33;
+}
+
+.menu-list li a {
+    color: #000000;
+}
+
+.site-header.is-active {
+  border-bottom: 1px solid #000;
+}
+
+.l-hd-inn-nav .menu-list li small {
+    font-size: 12px;
+    font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
+    letter-spacing: 0;
+    display: block;
+}
+
+.contact {
+    width: 200px;
+    /* background: #9B6F6F; */
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 30px 0;
+}
+
+.sp {
+  display: none;
+}
+
+/* line-up hover */
+.line-up {
+  position: relative;
+}
+.line-up a {
+  display: flex;
+}
+
+.line-up:hover {
+  background-color: var(--sub-color);
+  padding: 29px 6px;
+  border: 1px solid #000;
+  border-bottom: none;
+}
+
+.line-up img {
+  margin-left: 3px;
+}
+
+.line-up img.is-active {
+  transform: rotate(90deg);
+}
+
+.line-up-nav {
+  position: absolute;
+  margin-top: 30px;
+  left: -1.5px;
+  opacity: 0.7;
+  border: 1px solid #000;
+  border-bottom: none;
+  border-top: none;
+  background-color: var(--sub-color);
+}
+
+.line-up-nav li {
+  padding: 10px 1.5px;
+  border-bottom: 1px solid #000;
+}
+
+.line-up-nav a {
+  text-align: left;
+  width: 100px;
+  font-size: var(--pc-main-font-size);
+}
+
+.line-up-nav {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+  .line-up a{
+    display: block;
+    /* text-align: center; */
+  }
+
+  .line-up:hover {
+    background-color: #fff;
+    border: none;
+    padding: 0;
+  }
+
+  .line-up-arrow {
+    display: none;
+  }
+
+  .line-up-nav {
+    display: block;
+    position: relative;
+    background-color: #fff;
+    border: none;
+  }
+
+  .line-up-nav li {
+    padding-left: 20px;
+    border-bottom: 1px solid var(--sub-color);
+    margin-bottom: 15px!important;
+  }
+
+}
+/* line-up hover */
+
+.contact a {
+  color: #fff !important;
+}
+
+.menu-social {
+  display: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -59,6 +203,114 @@ header h1 {
 
   header h1 {
     line-height: 50px;
+  }
+
+  .l-hd-inn {
+      padding-left:5vw;
+  }
+
+  .pc {
+    display: none;
+  }
+
+  .sp {
+    display: block;
+  }
+
+  .l-hd-inn {
+    padding: 20px 0;
+    width: 90%;
+    margin: auto;
+    position: relative;
+  }
+
+  .l-hd-inn-nav {
+      max-width: unset;
+      width: auto;
+  }
+
+  .l-hd-inn-logo {
+    width: 108px;
+  }
+
+  .l-hd-inn-logo img {
+    width: 100%;
+  }
+
+  .l-hd-inn-nav .hamburger {
+    cursor: pointer;
+    width: 20px;
+    height: 10px;
+    position: relative;
+    z-index: 9;
+  }
+
+  .hamburger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #9B6F6F;
+    z-index: 9;
+    transition: 0.4s;
+  }
+
+  .hamburger span:first-child {
+      top: 0;
+  }
+
+  .hamburger span:last-child {
+      bottom: 0;
+  }
+
+  .hamburger.active-menu span:first-child {
+    top: 4px;
+    transform: rotate(45deg);
+  }
+
+  .hamburger.active-menu span:last-child {
+    top: 4px;
+    transform: rotate(-45deg);
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu.active-menu {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: block;
+    left: 0;
+    top: 0;
+    background: #fff;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+
+  .l-hd-inn-nav .menu .l-hd-inn-logo {
+    padding: 60px 0;
+    width: 154px;
+    margin: auto;
+  }
+
+  .menu-list {
+    flex-direction: column;
+  }
+
+  .menu-list li {
+    margin-bottom: 30px;
+  }
+
+  .menu-list small {
+    display: none!important;
+  }
+
+  .contact {
+    padding: 10px 0;
+    margin-bottom: 70px;
+    border-radius: 100px;
   }
 
 }
@@ -80,6 +332,9 @@ header h1 {
   margin: 0 auto;
   background-color: #fff;
 }
+
+
+
 
 @media screen and (max-width: 768px) {
 

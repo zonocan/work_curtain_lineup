@@ -14,7 +14,86 @@
 <body>
   <div id="page" class="site_1">
     <header id="masthead" class="site-header l-hd">
-      <h1>header</h1>
+      <div class="l-hd-inn">
+        <div class="l-hd-inn-fl d-fl">
+
+          <div class="l-hd-inn-mail sp">
+            <a>
+              <img src="asset/icon-mail.svg" alt="">
+            </a>
+          </div>
+          <div class="l-hd-inn-logo">
+            <h1>
+              <a href="#">
+                <img src="asset/logo.svg" alt="">
+              </a>
+            </h1>
+          </div>
+          <nav class="l-hd-inn-nav" id="site-navigation">
+
+            <div class="hamburger sp">
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="menu">
+
+              <div class="l-hd-inn-logo sp">
+                <h1>
+                  <a href="#">
+                    <img src="asset/logo.svg" alt="">
+                  </a>
+                </h1>
+              </div>
+
+              <ul class="menu-list d-fl">
+                <li>
+                  <a>CONCEPT</a>
+                  <small>コンセプト</small>
+                </li>
+                <li>
+                  <a>POINT</a>
+                  <small>こだわり</small>
+                </li>
+                <li class="line-up">
+                  <a>LINE UP<img src="asset/line-up-arrow.svg" class="line-up-arrow"></a>
+                  <small>商品情報</small>
+                  <nav class="line-up-nav">
+                    <ul>
+                      <li><a>遮光</a></li>
+                      <li><a>レース</a></li>
+                      <li><a>スタンダード</a></li>
+                    </ul>
+                  </nav>
+                </li>
+                <li>
+                  <a>NEWS</a>
+                  <small>お知らせ</small>
+                </li>
+                <li class="contact">
+                  <a>CONTACT</a>
+                  <small>お知らせ</small>
+                </li>
+              </ul>
+
+              <div class="menu-social">
+                <ul class="d-fl">
+                  <li>
+                    <a><img src="asset/icon-instagram.svg"></a>
+                  </li>
+                  <li>
+                    <a><img src="asset/icon-twitter.svg"></a>
+                  </li>
+                  <li>
+                    <a><img src="asset/icon-facebook.svg"></a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </nav>
+        </div>
+      </div>
     </header>
     <!-- header end -->
     <div id="content" class="site-content">
@@ -102,7 +181,7 @@
                   </li>
                   <li class="inputfl design-checkboxs">
                     <label class="checkbox-embroidery bg-checkbox">
-                      <input type="checkbox" value="embroidery" name="design_embroidery">
+                      <input type="checkbox" value="embroidery" name="design">
                       <span>
                         <span class="bg-checkbox-text">刺繍</span>
                       </span>
@@ -110,7 +189,7 @@
                       <!-- sp時のみの表示 -->
                     </label>
                     <label class="checkbox-lame bg-checkbox">
-                      <input type="checkbox" value="lame" name="design_lame">
+                      <input type="checkbox" value="lame" name="design">
                       <span>
                         <span class="bg-checkbox-text">ラメ</span>
                       </span>
@@ -118,7 +197,7 @@
                       <!-- sp時のみの表示 -->
                     </label>
                     <label class="checkbox-print bg-checkbox">
-                      <input type="checkbox" value="d_print" name="design_print">
+                      <input type="checkbox" value="d_print" name="design">
                       <span>
                         <span class="bg-checkbox-text">プリント</span>
                       </span>
@@ -126,7 +205,7 @@
                       <!-- sp時のみの表示 -->
                     </label>
                     <label class="checkbox-Floral bg-checkbox">
-                      <input type="checkbox" value="Floral" name="design_Floral">
+                      <input type="checkbox" value="Floral" name="design">
                       <span>
                         <span class="bg-checkbox-text">花柄</span>
                       </span>
@@ -143,7 +222,7 @@
                   </li>
                   <li class="inputfl material-checkboxs">
                     <label class="checkbox-linen bg-checkbox">
-                      <input type="checkbox" value="linen" name="material_linen">
+                      <input type="checkbox" value="linen" name="material">
                       <span>
                         <span class="bg-checkbox-text">リネン</span>
                       </span>
@@ -151,7 +230,7 @@
                       <!-- sp時のみの表示 -->
                     </label>
                     <label class="checkbox-cotton bg-checkbox">
-                      <input type="checkbox" value="cotton" name="material_cotton">
+                      <input type="checkbox" value="cotton" name="material">
                       <span>
                         <span class="bg-checkbox-text">コットン</span>
                       </span>
@@ -159,7 +238,7 @@
                       <!-- sp時のみの表示 -->
                     </label>
                     <label class="checkbox-print-material bg-checkbox">
-                      <input type="checkbox" value="m_print" name="material_print">
+                      <input type="checkbox" value="m_print" name="material">
                       <span>
                         <span class="bg-checkbox-text">プリント</span>
                       </span>
@@ -167,7 +246,7 @@
                       <!-- sp時のみの表示 -->
                     </label>
                     <label class="checkbox-cotton-linen bg-checkbox">
-                      <input type="checkbox" value="cotton_linen" name="material_print_cotton_linen">
+                      <input type="checkbox" value="cotton_linen" name="material">
                       <span>
                         <span class="bg-checkbox-text">
                           コットン<br>
@@ -188,31 +267,31 @@
                   </li>
                   <li class="inputfl color-checkboxs">
                     <label class="checkbox-white bg-checkbox">
-                      <input type="checkbox" value="white" name="color_white">
+                      <input type="checkbox" value="white" name="color">
                       <span>
                         <span class="bg-checkbox-text">ホワイト</span>
                       </span>
                     </label>
                     <label class="checkbox-black bg-checkbox">
-                      <input type="checkbox" value="black" name="color_black">
+                      <input type="checkbox" value="black" name="color">
                       <span>
                         <span class="bg-checkbox-text">ブラック</span>
                       </span>
                     </label>
                     <label class="checkbox-gray bg-checkbox">
-                      <input type="checkbox" value="gray" name="color_gray">
+                      <input type="checkbox" value="gray" name="color">
                       <span>
                         <span class="bg-checkbox-text">グレー</span>
                       </span>
                     </label>
                     <label class="checkbox-red bg-checkbox">
-                      <input type="checkbox" value="red" name="color_red">
+                      <input type="checkbox" value="red" name="color">
                       <span>
                         <span class="bg-checkbox-text">レッド</span>
                       </span>
                     </label>
                     <label class="checkbox-blue bg-checkbox">
-                      <input type="checkbox" value="blue" name="color_blue">
+                      <input type="checkbox" value="blue" name="color">
                       <span>
                         <span class="bg-checkbox-text">ブルー</span>
                       </span>
@@ -229,8 +308,8 @@
                     </p>
                   </li>
                   <li class="inputfl search-form-submit-area">
-                    <button type="button" name="button" class="search-form-reset-btn" onclick="searchFormReset()">リセットする</button>
-                    <button type="submit" name="button" class="submit-btn">検索</button>
+                    <button type="button" name="reset_button" class="search-form-reset-btn" onclick="searchFormReset()">リセットする</button>
+                    <button type="submit" name="submit_button" class="submit-btn">検索</button>
                   </li>
                 </ul>
               </section>
@@ -245,7 +324,7 @@
                   </li>
                   <li class="inputfl search-form-submit-area">
                     <input type="text" name="search_id" placeholder="a123456">
-                    <button type="submit" name="button" class="submit-btn">検索</button>
+                    <button type="submit" name="search_id_button" class="submit-btn">検索</button>
                   </li>
                 </ul>
               </section>

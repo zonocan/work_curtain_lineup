@@ -7,6 +7,7 @@ $(function() {
     nextText: '<i class="fas fa-angle-right"></i>',
     activeClass: 'navi-active',
   });
+
 });
 
 // アコーディオン
@@ -89,13 +90,56 @@ const slideToggleBtn = document.querySelector(".search-area-btn");
 // UIのDOM取得
 const slideToggleBtnUi = document.querySelector(".search-area-btn-ui");
 
+// 追記
+//
+const lineupNavBtn = document.querySelector(".line-up");
+
+//
+const lineupNavBtnImg = document.querySelector(".line-up-arrow");
+
+//
+const lineupNav = document.querySelector(".line-up-nav");
+
+//
+const header = document.querySelector(".site-header");
+
+
 // アコーディオン実行
 slideToggleBtn.addEventListener("click", () => {
   slideToggle(form, 300);
   slideToggleBtnUi.classList.toggle('is-active');
 });
 
+//headerのアコーディオン
+if(!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)) {
+
+lineupNavBtn.addEventListener("mouseenter", () => {
+  slideDown(lineupNav, 300);
+  lineupNavBtnImg.classList.add('is-active');
+  header.classList.add('is-active');
+});
+
+lineupNavBtn.addEventListener("mouseleave", () => {
+  slideUp(lineupNav, 300);
+  lineupNavBtnImg.classList.remove('is-active');
+  header.classList.remove('is-active');
+});
+
+}
+//SP時無効
+
 // searchformのリセットボタン
 function searchFormReset() {
   document.searchform.reset();
 }
+
+// ハンバーガー
+const ham = document.querySelector('.hamburger');
+const nav = document.querySelector('.menu');
+
+ham.addEventListener('click', function () {
+
+  ham.classList.toggle('active-menu');
+  nav.classList.toggle('active-menu');
+
+});
